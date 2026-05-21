@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+  <meta name="description" content="AI-powered cybercrime assistance chatbot for India. Get immediate guidance for cybercrime incidents." />
+  <meta name="theme-color" content="#0a0a0b" media="(prefers-color-scheme: dark)" />
+  <meta name="theme-color" content="#f5f5f7" media="(prefers-color-scheme: light)" />
+  <title>CyberShield AI — Cybercrime Assistance</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Space+Mono:ital,wght@0,400;0,700;1,400&family=Syne:wght@400;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='%23ffffff'%3E%3Cpath d='M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5'/%3E%3C/svg%3E" />
+</head>
+<body>
+  <aside class="sidebar" id="sidebar" aria-label="Main navigation">
+    <div class="sidebar-logo">
+      <div class="logo-icon" aria-hidden="true">🛡️</div>
+      <div>
+        <div class="logo-text">CYBERSHIELD AI</div>
+        <div class="logo-sub">v4.0 · PRO</div>
+      </div>
+    </div>
+    <nav class="sidebar-nav" aria-label="Navigation menu">
+      <button class="nav-btn active" data-panel="home" aria-label="Home chat">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 9l9-7 9 7v11a2 2 0 01-2 2H5a2 2 0 01-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
+        <span>Home</span>
+      </button>
+      <button class="nav-btn" data-panel="history" aria-label="Chat history">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+        <span>History</span>
+      </button>
+      <div class="nav-divider"></div>
+      <button class="nav-btn" data-panel="emergency" aria-label="Emergency resources">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M10.29 3.86L1.82 18a2 2 0 001.71 3h16.94a2 2 0 001.71-3L13.71 3.86a2 2 0 00-3.42 0z"/><line x1="12" y1="9" x2="12" y2="13"/><line x1="12" y1="17" x2="12.01" y2="17"/></svg>
+        <span>Emergency</span>
+      </button>
+      <div class="nav-divider"></div>
+      <button class="nav-btn" data-panel="settings" aria-label="Settings">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="3"/><path d="M19.4 15a1.65 1.65 0 00.33 1.82l.06.06a2 2 0 010 2.83 2 2 0 01-2.83 0l-.06-.06a1.65 1.65 0 00-1.82-.33 1.65 1.65 0 00-1 1.51V21a2 2 0 01-4 0v-.09A1.65 1.65 0 009 19.4a1.65 1.65 0 00-1.82.33l-.06.06a2 2 0 01-2.83-2.83l.06-.06A1.65 1.65 0 004.68 15a1.65 1.65 0 00-1.51-1H3a2 2 0 010-4h.09A1.65 1.65 0 004.6 9a1.65 1.65 0 00-.33-1.82l-.06-.06a2 2 0 012.83-2.83l.06.06A1.65 1.65 0 009 4.68a1.65 1.65 0 001-1.51V3a2 2 0 014 0v.09a1.65 1.65 0 001 1.51 1.65 1.65 0 001.82-.33l.06-.06a2 2 0 012.83 2.83l-.06.06A1.65 1.65 0 0019.4 9a1.65 1.65 0 001.51 1H21a2 2 0 010 4h-.09a1.65 1.65 0 00-1.51 1z"/></svg>
+        <span>Settings</span>
+      </button>
+      <button class="nav-btn" data-panel="about" aria-label="About">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg>
+        <span>About</span>
+      </button>
+    </nav>
+    <div class="sidebar-footer">
+      <div class="sidebar-footer-label">INDIA CYBER HELPLINE</div>
+      <a href="tel:1930" class="nav-btn emergency-call" aria-label="Call 1930 cyber helpline">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 9.8a19.79 19.79 0 01-3.07-8.68A2 2 0 012 0h3a2 2 0 012 1.72 12.84 12.84 0 00.7 2.81 2 2 0 01-.45 2.11L6.09 7.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45 12.84 12.84 0 002.81.7A2 2 0 0122 14z"/></svg>
+        <span>1930</span>
+      </a>
+    </div>
+  </aside>
+
+  <div class="sidebar-overlay" id="sidebar-overlay" onclick="window.CyberShield?.closeSidebar?.()"></div>
+
+  <main class="main">
+    <div class="topbar">
+      <div class="topbar-left">
+        <button class="mob-menu-btn" id="menu-toggle" aria-label="Menu">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
+        </button>
+        <span class="topbar-title">CYBERSHIELD AI</span>
+      </div>
+      <div class="topbar-actions">
+        <div class="status-chip" aria-label="System status">
+          <div class="status-dot"></div>
+          <span>Online</span>
+        </div>
+        <button class="icon-btn" id="theme-toggle-btn" aria-label="Toggle theme">
+          <svg class="theme-icon-dark" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg>
+          <svg class="theme-icon-light" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="display:none"><path d="M21 12.79A9 9 0 1111.21 3 7 7 0 0021 12.79z"/></svg>
+        </button>
+        <button class="icon-btn" id="clear-chat-btn" aria-label="Clear chat">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="3 6 5 6 21 6"/><path d="M19 6l-1 14a2 2 0 01-2 2H8a2 2 0 01-2-2L5 6"/><path d="M10 11v6"/><path d="M14 11v6"/></svg>
+        </button>
+      </div>
+    </div>
+
+    <div class="panel active" id="panel-home" role="main" aria-label="Chat interface">
+      <div class="chat-messages" id="chat-messages">
+        <div class="welcome-card" id="welcome-card">
+          <div class="welcome-shield" aria-hidden="true">🛡️</div>
+          <h1 class="welcome-title">CyberShield AI</h1>
+          <p class="welcome-sub">Advanced AI-powered cybercrime assistance.<br/>Describe your situation — we'll provide detailed analysis and actionable steps.</p>
+          <div class="suggestion-chips" id="suggestion-chips"></div>
+        </div>
+      </div>
+      <div class="input-area">
+        <div class="input-wrap">
+          <textarea id="user-input" placeholder="Describe your cybercrime situation in detail…" rows="1" aria-label="Your message"></textarea>
+          <div class="input-actions">
+            <button class="mic-btn" id="mic-btn" aria-label="Voice input">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 1a3 3 0 00-3 3v8a3 3 0 006 0V4a3 3 0 00-3-3z"/><path d="M19 10v2a7 7 0 01-14 0v-2"/><line x1="12" y1="19" x2="12" y2="23"/><line x1="8" y1="23" x2="16" y2="23"/></svg>
+            </button>
+            <button class="send-btn" id="send-btn" aria-label="Send message">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="22" y1="2" x2="11" y2="13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/></svg>
+            </button>
+          </div>
+        </div>
+        <div class="input-hint">Press Enter to send · Shift+Enter for new line · Click 🎤 for voice</div>
+      </div>
+    </div>
+
+    <div class="panel" id="panel-history" role="region" aria-label="Chat history">
+      <h2 class="panel-title">Chat History</h2>
+      <div class="history-list" id="history-list"></div>
+    </div>
+
+    <div class="panel" id="panel-emergency" role="region" aria-label="Emergency resources">
+      <h2 class="panel-title">🚨 Emergency Guide</h2>
+      <div class="em-card">
+        <div class="em-card-title">Immediate Helplines</div>
+        <a href="tel:1930" class="em-big-btn">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 9.8a19.79 19.79 0 01-3.07-8.68A2 2 0 012 0h3a2 2 0 012 1.72 12.84 12.84 0 00.7 2.81 2 2 0 01-.45 2.11L6.09 7.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45 12.84 12.84 0 002.81.7A2 2 0 0122 14z"/></svg>
+          National Cyber Crime Helpline
+          <span class="em-number">1930</span>
+        </a>
+        <a href="https://cybercrime.gov.in" target="_blank" rel="noopener noreferrer" class="em-big-btn">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 014 10 15.3 15.3 0 01-4 10 15.3 15.3 0 01-4-10 15.3 15.3 0 014-10z"/></svg>
+          cybercrime.gov.in — File Complaint
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="external-icon"><path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+        </a>
+      </div>
+      <div class="em-card">
+        <div class="em-card-title">Financial Fraud — Immediate Steps</div>
+        <div class="steps-list">
+          <div class="step-item"><div class="step-num">1</div>Call your bank's 24×7 helpline right now</div>
+          <div class="step-item"><div class="step-num">2</div>Request immediate card/account freeze</div>
+          <div class="step-item"><div class="step-num">3</div>Change all banking passwords & PINs</div>
+          <div class="step-item"><div class="step-num">4</div>Call 1930 to register cyber complaint</div>
+          <div class="step-item"><div class="step-num">5</div>File complaint at cybercrime.gov.in</div>
+          <div class="step-item"><div class="step-num">6</div>Screenshot all evidence before deleting</div>
+          <div class="step-item"><div class="step-num">7</div>Visit nearest police station for FIR</div>
+        </div>
+      </div>
+      <div class="em-card">
+        <div class="em-card-title">Identity / Social Media Fraud</div>
+        <div class="steps-list">
+          <div class="step-item"><div class="step-num">1</div>Report fake profile directly on the platform</div>
+          <div class="step-item"><div class="step-num">2</div>Document with screenshots before reporting</div>
+          <div class="step-item"><div class="step-num">3</div>Alert friends/family about impersonation</div>
+          <div class="step-item"><div class="step-num">4</div>File complaint at cybercrime.gov.in</div>
+          <div class="step-item"><div class="step-num">5</div>Change passwords on all linked accounts</div>
+        </div>
+      </div>
+      <div class="em-card">
+        <div class="em-card-title">Blackmail / Extortion</div>
+        <div class="steps-list">
+          <div class="step-item"><div class="step-num">1</div>Do NOT pay the blackmailer — it escalates</div>
+          <div class="step-item"><div class="step-num">2</div>Screenshot and preserve all evidence</div>
+          <div class="step-item"><div class="step-num">3</div>Block the contact but keep records</div>
+          <div class="step-item"><div class="step-num">4</div>Call 1930 immediately</div>
+          <div class="step-item"><div class="step-num">5</div>Talk to a trusted adult or counselor</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="panel" id="panel-settings" role="region" aria-label="Settings">
+      <h2 class="panel-title">Settings</h2>
+      <div class="settings-group">
+        <div class="settings-row">
+          <div>
+            <div class="settings-row-label">Dark Mode</div>
+            <div class="settings-row-sub">Toggle light/dark theme</div>
+          </div>
+          <button class="toggle on" id="theme-toggle" aria-label="Toggle dark mode"></button>
+        </div>
+        <div class="settings-row">
+          <div>
+            <div class="settings-row-label">Voice Responses</div>
+            <div class="settings-row-sub">Read AI answers aloud</div>
+          </div>
+          <button class="toggle on" id="voice-toggle" aria-label="Toggle voice responses"></button>
+        </div>
+        <div class="settings-row">
+          <div>
+            <div class="settings-row-label">Save History</div>
+            <div class="settings-row-sub">Keep chat in localStorage</div>
+          </div>
+          <button class="toggle on" id="history-toggle" aria-label="Toggle history saving"></button>
+        </div>
+      </div>
+      <div class="settings-group">
+        <div class="settings-row">
+          <div>
+            <div class="settings-row-label">Gemini API Key</div>
+            <div class="settings-row-sub">Required for AI analysis · Stored locally only</div>
+          </div>
+        </div>
+        <div class="api-input-wrap">
+          <input type="password" class="api-input" id="api-key-input" placeholder="AIza..." autocomplete="off" aria-label="Gemini API key" />
+          <button class="api-save-btn" id="api-save-btn">Save & Test</button>
+        </div>
+      </div>
+      <button class="clear-btn" id="settings-clear-btn">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="3 6 5 6 21 6"/><path d="M19 6l-1 14a2 2 0 01-2 2H8a2 2 0 01-2-2L5 6"/></svg>
+        Clear All Chat History
+      </button>
+    </div>
+
+    <div class="panel" id="panel-about" role="region" aria-label="About">
+      <h2 class="panel-title">About CyberShield AI</h2>
+      <div class="about-card">
+        <div class="about-title">What is CyberShield AI?</div>
+        <p class="about-text">CyberShield AI is an advanced AI-powered cybercrime assistance chatbot designed to help ordinary people understand and respond to cybercrime incidents. It uses Google Gemini AI to analyze your situation and provide detailed, actionable guidance.</p>
+      </div>
+      <div class="feature-grid" id="feature-grid"></div>
+      <div class="about-card">
+        <div class="about-title">Disclaimer</div>
+        <p class="about-text">CyberShield AI provides general guidance only. It is NOT a substitute for legal advice or official law enforcement. Always contact 1930 or cybercrime.gov.in for official assistance. The AI may make errors — use responses as a starting point only.</p>
+      </div>
+      <div class="about-card">
+        <div class="about-title">Technology Stack</div>
+        <p class="about-text">Frontend: HTML5 · CSS3 · Vanilla JS<br/>AI: Google Gemini 2.0 Flash API<br/>APIs: Web Speech API · Speech Synthesis API · localStorage<br/>No backend · No database · Fully client-side</p>
+      </div>
+    </div>
+  </main>
+
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+  <script src="js/config.js"></script>
+  <script src="js/utils.js"></script>
+  <script src="js/storage.js"></script>
+  <script src="js/theme.js"></script>
+  <script src="js/emergency.js"></script>
+  <script src="js/scenarios.js"></script>
+  <script src="js/prompts.js"></script>
+  <script src="js/api.js"></script>
+  <script src="js/speech.js"></script>
+  <script src="js/pdf.js"></script>
+  <script src="js/ui.js"></script>
+  <script src="js/app.js"></script>
+</body>
+</html>
